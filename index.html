@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="ressources/icon.png" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <title>The Open Medium</title>
+    </head>
+
+    <body onscroll="scroll()">
+        <header class="animateHeaderReverse">
+            <div class="title"><img src="ressources/icon.png" height="50" width="50" /> The Open Medium</div>
+        </header>
+        <article>
+            Hi
+        </article>
+        <footer>
+            <a href="https://github.com/TheOpenMedium/">
+                <img src="ressources/GitHub-Mark.png" height="20px" />
+                <img src="ressources/GitHub-Logo.png" height="20px" />
+            </a>
+        </footer>
+    </body>
+
+    <script>
+    let was_top = true
+
+    function scroll() {
+        if (was_top && window.pageYOffset != 0) {
+            document.body.firstElementChild.className = ""
+            void document.body.firstElementChild.offsetWidth
+            document.body.firstElementChild.className = "animateHeader"
+            was_top = false
+        }
+        else if (!was_top && window.pageYOffset == 0) {
+            document.body.firstElementChild.className = ""
+            void document.body.firstElementChild.offsetWidth
+            document.body.firstElementChild.className = "animateHeaderReverse"
+            was_top = true
+        }
+    }
+    </script>
+</html>
