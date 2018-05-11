@@ -8,12 +8,55 @@
     </head>
 
     <body onscroll="scroll()">
-        <header class="animateHeaderReverse">
+        <header class="animateHeader">
             <div class="title"><img src="ressources/icon.png" height="50" width="50" /> The Open Medium</div>
         </header>
+        <div class="menu">
+            <!-- Menu here -->
+            <span style="color: #404040; background-color: #55ff99;" title="HAY">H</span>
+            <span style="color: grey; background-color: lightgrey;" title="Coming Soon">C</span>
+            <span style="color: grey; background-color: lightgrey;" title="Coming Soon">C</span>
+            <span style="color: grey; background-color: lightgrey;" title="Coming Soon">C</span>
+            <span style="color: grey; background-color: lightgrey;" title="Coming Soon">C</span>
+            <span style="color: grey; background-color: lightgrey;" title="Coming Soon">C</span>
+            <span style="color: grey; background-color: lightgrey;" title="Coming Soon">C</span>
+            <span style="color: grey; background-color: lightgrey;" title="Coming Soon">C</span>
+            <span style="color: grey; background-color: lightgrey;" title="Coming Soon">C</span>
+        </div>
         <article>
             Hi
         </article>
+        <!--
+        <div class="choose">
+            <div style="color: #404040; background-color: #55ff99;" title="HAY">
+                H
+            </div>
+            <div style="color: grey; background-color: lightgrey;" title="Coming Soon">
+                C
+            </div>
+            <div style="color: grey; background-color: lightgrey;" title="Coming Soon">
+                C
+            </div>
+            <div style="color: grey; background-color: lightgrey;" title="Coming Soon">
+                C
+            </div>
+            <div style="color: grey; background-color: lightgrey;" title="Coming Soon">
+                C
+            </div>
+            <div style="color: grey; background-color: lightgrey;" title="Coming Soon">
+                C
+            </div>
+            <div style="color: grey; background-color: lightgrey;" title="Coming Soon">
+                C
+            </div>
+            <div style="color: grey; background-color: lightgrey;" title="Coming Soon">
+                C
+            </div>
+            <div style="color: grey; background-color: lightgrey;" title="Coming Soon">
+                C
+            </div>
+        </div>
+        -->
         <footer>
             <a href="https://github.com/TheOpenMedium/">
                 <img src="ressources/GitHub-Mark.png" height="20px" />
@@ -27,15 +70,13 @@
 
     function scroll() {
         if (was_top && window.pageYOffset != 0) {
-            document.body.firstElementChild.className = ""
-            void document.body.firstElementChild.offsetWidth
-            document.body.firstElementChild.className = "animateHeader"
+            document.body.firstElementChild.className = "animateHeaderSmall"
+            document.getElementsByClassName('menu')[0].className = "menuSmall"
             was_top = false
         }
         else if (!was_top && window.pageYOffset == 0) {
-            document.body.firstElementChild.className = ""
-            void document.body.firstElementChild.offsetWidth
-            document.body.firstElementChild.className = "animateHeaderReverse"
+            document.body.firstElementChild.className = "animateHeader"
+            document.getElementsByClassName('menuSmall')[0].className = "menu"
             was_top = true
         }
     }
